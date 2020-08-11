@@ -6,6 +6,18 @@
   height: 40vmin;
   pointer-events: none;
 }
+.errorMsg{
+
+  border: 1px solid blue;
+  
+  z-index: 1;
+  height: 400px;
+}
+
+
+  
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

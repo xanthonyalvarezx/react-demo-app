@@ -23,6 +23,7 @@ body {
 
 form > div {
   margin-bottom: 0.5rem;
+  
 }
 
 label {
@@ -53,16 +54,17 @@ button {
 }
 
 .Navigation ul {
+  display: flex;
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
 .Navigation li {
-  display: inline-block;
+  display: flex;
 }
 
 .Navigation a {
-  display: block;
-  padding: 4px;
+  display: flex;
+  padding: 2px;
 }

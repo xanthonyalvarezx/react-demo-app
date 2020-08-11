@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route} from 'react-router-dom' 
+import {Route, Switch} from 'react-router-dom' 
 import logo from './logo.svg';
 import './App.css';
 import Clock from './components/clock/Clock'
@@ -7,9 +7,19 @@ import Welcome from './components/welcome/welcome'
 import Contact from './components/contact/Contact'
 import { render, findByLabelText } from '@testing-library/react';
 import Navigation from './components/Navigation/Nav'
+import Oops from './images/oops-cat.jpeg'
+import Default from './components/default/Default'
+
 
 class App extends Component {
+  constructor(props){
+    super(props)
+
+
+    
+  }
 render(){
+  
 
   let appStyle={
       backgroundColor:this.props.bgcolor,
@@ -21,41 +31,59 @@ render(){
       margin:'10px',
       justifyContent:'flex-end',
       alignItems:'flex-start',
+      height:'200px',
+      width:'400px'
       
      
   }
+  
+
+
+  
+  
 
 
   return (
     <div className="App" style={appStyle} >
+        
         <Navigation/>
-
+    <Switch>
         <Route
           exact
           path="/"
-          render={(props) => <Welcome {...props}
-           name='Anthony'
-            />}
-        />
-        <Route
-          exact
-          path="/:mike"
-          render={(props) => <Welcome {...props}
-           name='Mike'
-            />}
-        />
-        
-        <Route  
-        path="/clock" 
-        component={Clock} 
+          render={(props) => <Welcome {...props} name="Anthony"/>}
         />
 
+        <Route
+          exact
+          path="//:name"
+          render={(props) => <Welcome {...props}
+           name={props.match.params.name}/>}
+        />
+        
         <Route 
+          exact 
+          path="/clock" 
+          component={Clock} 
+        />
+
+      <Route      
+       exact
         path="/contact" 
         component={Contact} 
         />
-    </div>
-  );
+
+           <Route>
+            
+               <Default image={Oops} alt='404 Page Not Found'/>
+             
+           </Route>
+        
+        
+        
+    </Switch>
+        </div>
+    );
   }
 }
 
