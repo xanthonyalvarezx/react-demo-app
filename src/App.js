@@ -9,7 +9,7 @@ import { render, findByLabelText } from '@testing-library/react';
 import Navigation from './components/Navigation/Nav'
 import Oops from './images/oops-cat.jpeg'
 import Default from './components/default/Default'
-
+import Jeopardy from './components/jeopardy/Jeopardy'
 
 class App extends Component {
   constructor(props){
@@ -32,7 +32,7 @@ render(){
       justifyContent:'flex-end',
       alignItems:'flex-start',
       height:'200px',
-      width:'400px'
+      width:'900px'
       
      
   }
@@ -72,6 +72,12 @@ render(){
         path="/contact" 
         component={Contact} 
         />
+      
+      <Route     
+       exact
+        path="/jeopardy" 
+        component={Jeopardy} 
+         />
 
            <Route>
             

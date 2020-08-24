@@ -17,13 +17,13 @@ body {
 
 .App {
   background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(0, 0 ,0, 0.3);
+  border: 1px solid rgba(0, 0, 0, 0.3);
   padding: 1rem 2rem;
 }
 
-form > div {
+form>div {
   margin-bottom: 0.5rem;
-  
+
 }
 
 label {
@@ -31,7 +31,7 @@ label {
 }
 
 input {
-  border: 1px solid rgba(0, 0 ,0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   font-size: 1rem;
   padding: 4px;
 }
@@ -39,7 +39,7 @@ input {
 button {
   background: #7067CFAA;
   padding: 4px;
-  border: 1px solid rgba(0, 0 ,0, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   color: white;
   font-size: 1rem;
   width: 100%;
@@ -62,9 +62,9 @@ button {
 
 .Navigation li {
   display: flex;
+
 }
 
 .Navigation a {
   display: flex;
-  padding: 2px;
-}
+  padding: 2px;}

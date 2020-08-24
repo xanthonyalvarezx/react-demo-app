@@ -77,7 +77,7 @@ render(){
                     />
 
                    </div>
-                   <button>Submit Form</button>
+                   <button type='submit'>Submit Form</button>
                    
             </form>
             {this.state.formData.firstName}

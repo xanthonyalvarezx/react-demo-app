@@ -10,7 +10,7 @@ ReactDOM.render(
     <BrowserRouter>
     <App bgcolor='#58B3FF' color='#703304' />
     
-    <App bgcolor='#49DD8E' color='#F5390A' />
+   
     </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
