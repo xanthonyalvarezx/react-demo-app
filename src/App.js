@@ -76,8 +76,8 @@ render(){
       <Route     
        exact
         path="/jeopardy" 
-        component={Jeopardy} 
-         />
+        component={Jeopardy}
+      />
 
            <Route>
             

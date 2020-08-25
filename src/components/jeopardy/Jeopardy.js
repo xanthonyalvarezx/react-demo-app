@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 //import our service
 import JeopardyService from "../../jeopardyService";
+import Display from './Display'
 
 
 class Jeopardy extends Component {
@@ -57,6 +58,7 @@ handleSubmit = (event) =>{
   event.preventDefault()
   this.scoreTotal()
   this.getNewQuestion()
+  this.resetForm()
   
   
       
@@ -83,32 +85,18 @@ handleSubmit = (event) =>{
     
     return (
       <div>
-        <strong>Category: </strong>{this.state.data.category.title}
-        <br/>
-        <strong>Question: </strong>{this.state.data.question}
-        <br/>
-        <strong>value: </strong>{this.state.data.value}
-        <br/>
-              <form onSubmit={this.handleSubmit} >
-                <div>
-
-                <label htmlFor='answer'><strong>Your Answer:</strong></label>
-                
-                <input
-                type='text'
-                name='answer'
-                value={this.state.formData.answer}
-                onChange={this.handleChange}
-
-            
-              />   
-                </div>
-              <button type='submit'>Submit Answer</button>
-              </form>
-                <br/>
-             
-              <strong>Your Score: </strong>{this.state.score}
+        <Display
+        data={this.state.data}
+        formData={this.state.formData}
+        score={this.state.score}
+        handleChange={this.handleChange}
+        handleSubmit={this.handleSubmit}
+        
+        />
       </div>
+
+        
+        
     );
 
       
